@@ -54,6 +54,9 @@ A lógica do código é a seguinte:
 - Retorna o resultado da comparação.
 - Dessa forma, ao chamar a função eMaiorDeIdade e passar um campo contendo uma data de nascimento, o código irá verificar se a pessoa é maior de idade com base na data fornecida.
 
+*OUTRAS INFORMAÇÕES*
+* Mensagens customizadas de erro são mostradas na página
+* Os dados do formulário são salvos em localStorage
 
 ## Demonstração 
 
