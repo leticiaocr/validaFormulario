@@ -53,24 +53,34 @@ A lógica do código é a seguinte:
 - Compara se a dataAtual é maior ou igual à dataMais18. Se a pessoa tiver pelo menos 18 anos de idade, o resultado será true; caso contrário, será false.
 - Retorna o resultado da comparação.
 - Dessa forma, ao chamar a função eMaiorDeIdade e passar um campo contendo uma data de nascimento, o código irá verificar se a pessoa é maior de idade com base na data fornecida.
+- 
+*ENVIO DE FOTO*
+- Primeiramente, o código seleciona os elementos do HTML usando os seletores [data-...] para obter referências aos elementos de botões, câmera, vídeo, canvas, mensagem e enviar. Em seguida, declara uma variável imagemURL para armazenar a URL da imagem.
+
+- Quando o botão de iniciar a câmera é clicado, é feita uma solicitação assíncrona para obter acesso à câmera do dispositivo usando o método getUserMedia. Uma vez que o acesso é concedido, o vídeo é exibido no elemento <video>.
+
+Quando o botão de tirar foto é clicado, a função associada a ele é acionada. A imagem capturada a partir do vídeo é desenhada no elemento <canvas> usando o método drawImage. A URL da imagem é obtida usando o método toDataURL do canvas, especificando o formato como 'image/jpeg'. A URL da imagem é armazenada na variável imagemURL, e o campo da câmera é ocultado enquanto a mensagem é exibida.
+
+Quando o botão de enviar foto é clicado, a função associada a ele é acionada. Primeiro, os dados existentes no LocalStorage são obtidos usando o método getItem, e o retorno é convertido de volta para um objeto JavaScript usando JSON.parse. Em seguida, a propriedade imagem do objeto é atualizada com a URL da imagem capturada. Os dados atualizados são armazenados novamente no LocalStorage usando o método setItem, e o usuário é redirecionado para uma página diferente usando window.location.href.
+
 
 *OUTRAS INFORMAÇÕES*
 * Mensagens customizadas de erro são mostradas na página
-* Os dados do formulário são salvos em localStorage
+* Os dados do formulário são salvos em localStorage juntamente com a foto.
 
 ## Demonstração 
 
 
 
-![Tela]()
+![Tela](https://github.com/leticiaocr/validaFormulario/blob/main/screen-capture.gif)
 
 
 
 
 ## Links
-  - Link para acesso: 
+  - Link para acesso: https://leticiaocr.github.io/validaFormulario/ 
   
-  - Repositório: 
+  - Repositório: https://github.com/leticiaocr/validaFormulario.git
 
   ## Autores
 
@@ -82,6 +92,6 @@ A lógica do código é a seguinte:
 **Para executar este projeto na sua máquina, siga as instruções:**
 
 * execute o seguinte comando no seu terminal:
-`$ git clone  `
+`$ git clone [https://github.com/leticiaocr/validaFormulario.git]`
 * abra a pasta que será  criada
 * abra o arquivo "index.html" com o navegador de sua preferência 
